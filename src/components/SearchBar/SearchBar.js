@@ -2,12 +2,13 @@ import { useState } from "react";
 import {
   SearchHeader,
   SearchForm,
-  SearchButton,
-  SearchLabel,
+  ButtonWrapper,
   SearchInput,
 } from "./SearchBar.styled";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import IconButton from "@mui/material/IconButton";
+import SearchIcon from '@mui/icons-material/Search';
 
 export default function SearchBar({onSubmit}) {
   const [request, setRequest] = useState("");
@@ -41,6 +42,11 @@ export default function SearchBar({onSubmit}) {
             value={request}
             onChange={handleNameChange}
           />
+          <ButtonWrapper>
+          <IconButton >
+              <SearchIcon />
+            </IconButton>
+            </ButtonWrapper>
         </SearchForm>
       // </SearchHeader>
     );
