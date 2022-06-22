@@ -6,10 +6,15 @@ import Title from './components/Header/Header';
 import { ToastContainer, toast } from "react-toastify";
 import DataTable from "./components/DataTable/DataTable"
 import "react-toastify/dist/ReactToastify.css";
+import { useState } from 'react';
 
 
 function App() {
-  
+  const [filter, setFilter] = useState("");
+
+  const countrySearch = (e) => {
+    setFilter(e.currentTarget.value);
+  };
   
   return (
     <Container>

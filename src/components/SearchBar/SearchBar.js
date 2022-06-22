@@ -11,39 +11,37 @@ import IconButton from "@mui/material/IconButton";
 import SearchIcon from '@mui/icons-material/Search';
 
 export default function SearchBar({onSubmit}) {
-  const [request, setRequest] = useState("");
+  // const [request, setRequest] = useState("");
 
-  const handleNameChange = (event) => {
-    setRequest((event.currentTarget.value.toLowerCase()));
-  };
+  // const handleNameChange = (event) => {
+  //   setRequest((event.currentTarget.value.toLowerCase()));
+  // };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
 
-    if (request.trim() === "") {
-      toast.error("Please enter your query!", {
-        theme: "colored",
-      });
-      return;
-    }
+  //   if (request.trim() === "") {
+  //     toast.error("Please enter your query!", {
+  //       theme: "colored",
+  //     });
+  //     return;
+  //   }
 
-    onSubmit(request);
-    setRequest("");
-  };
+  //   onSubmit(request);
+  //   setRequest("");
+  // };
     return (
       // <SearchHeader>
-        <SearchForm onSubmit={handleSubmit}>
+        <SearchForm >
             {/* <SearchLabel>Search</SearchLabel> */}
           <SearchInput
             type="text"
             autoComplete="off"
             autoFocus
             placeholder="Search..."
-            value={request}
-            onChange={handleNameChange}
           />
           <ButtonWrapper>
-          <IconButton >
+          <IconButton type="submit" >
               <SearchIcon />
             </IconButton>
             </ButtonWrapper>
