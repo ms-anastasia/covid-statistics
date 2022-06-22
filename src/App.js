@@ -1,6 +1,4 @@
-
 import './App.css';
-import { useState, useEffect } from "react";
 import SearchBar from "./components/SearchBar/SearchBar";
 import Container from "./components/Container/Container";
 import { HeaderContainer, Header } from './components/Header/Header.styled';
@@ -9,8 +7,9 @@ import { ToastContainer, toast } from "react-toastify";
 import DataTable from "./components/DataTable/DataTable"
 import "react-toastify/dist/ReactToastify.css";
 
-function App() {
 
+function App() {
+  
   
   return (
     <Container>
