@@ -60,7 +60,7 @@ margin-bottom: 49px;
 `;
 
 export const TextWrapper = styled.div`
-width: 100%
+width: 100%;
 display: flex;
 flex-direction: row;
 align-items: center;
@@ -68,7 +68,6 @@ align-items: center;
 
 export const TextDescription = styled.span`
 display: inline-block;
-margin-left: auto;
 margin-left: 29px;
 `;
 

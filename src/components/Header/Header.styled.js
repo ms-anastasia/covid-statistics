@@ -5,6 +5,7 @@ export const HeaderContainer = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 `;
 export const HeaderWrapper = styled.div`
   display: flex;
@@ -13,7 +14,7 @@ export const HeaderWrapper = styled.div`
   align-items: center;
 
   width: 553px;
-height: 200px;
+  height: 200px;
 `;
 
 export const Header = styled.h1`

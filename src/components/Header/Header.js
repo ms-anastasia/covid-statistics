@@ -9,7 +9,7 @@ return(
         <img src={logo} width="200px" height="200px" alt="logo" />
 <Header>
         
-        STATISTICS
+        STATISTIC
       </Header>
       </HeaderWrapper>
 )

@@ -1,20 +1,18 @@
-import './App.css';
+import "./App.css";
 import SearchBar from "./components/SearchBar/SearchBar";
 import Container from "./components/Container/Container";
-import { HeaderContainer, Header } from './components/Header/Header.styled';
-import Title from './components/Header/Header';
+import { HeaderContainer, Header } from "./components/Header/Header.styled";
+import Title from "./components/Header/Header";
 import { ToastContainer, toast } from "react-toastify";
-import DataTable from "./components/DataTable/DataTable"
+import DataTable from "./components/DataTable/DataTable";
 import "react-toastify/dist/ReactToastify.css";
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 import { fetchCountries } from "./services/api";
-
 
 function App() {
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState("");
 
-  
   const getCountriesData = () => {
     fetchCountries().then((data) => setData(data.Countries));
   };
@@ -33,6 +31,11 @@ function App() {
 
   const countrySearch = (e) => {
     setFilter(e.currentTarget.value);
+    if (filteredCountries.length == 0) {
+      toast.error("Nothing found on your query!", {
+        theme: "colored",
+      });
+    }
   };
 
   const normalizedFilter = filter.toLowerCase();
@@ -43,20 +46,22 @@ function App() {
   return (
     <Container>
       <HeaderContainer>
-      <Title/>
-    <SearchBar value={filter} onChange={countrySearch}/>
-    </HeaderContainer>
-    <DataTable rows={filteredCountries}/>
-    <ToastContainer
+        <Title />
+        <SearchBar value={filter} onChange={countrySearch} />
+      </HeaderContainer>
+      <DataTable rows={filteredCountries} />
+      <ToastContainer
         position="top-right"
         autoClose={5000}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick
         rtl={false}
+        limit={1}
         pauseOnFocusLoss
         draggable
         pauseOnHover
+        progress={1}
       />
     </Container>
   );
