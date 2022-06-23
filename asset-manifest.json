@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/covid-statistics/static/css/main.937ce2e0.css",
+    "main.js": "/covid-statistics/static/js/main.27987e26.js",
+    "static/js/787.32d0a012.chunk.js": "/covid-statistics/static/js/787.32d0a012.chunk.js",
+    "static/media/logo.svg": "/covid-statistics/static/media/logo.bbc6527847a7ccdfbb51dc431fa2e988.svg",
+    "static/media/skelet.svg": "/covid-statistics/static/media/skelet.842606bb896d6b913e1c71d17b6fcce5.svg",
+    "index.html": "/covid-statistics/index.html",
+    "static/media/document.svg": "/covid-statistics/static/media/document.edd4f3fde8945ae1a234701d5f84985b.svg",
+    "static/media/heart.svg": "/covid-statistics/static/media/heart.9257d4386f4611ccf4ccf048c88464a8.svg",
+    "main.937ce2e0.css.map": "/covid-statistics/static/css/main.937ce2e0.css.map",
+    "main.27987e26.js.map": "/covid-statistics/static/js/main.27987e26.js.map",
+    "787.32d0a012.chunk.js.map": "/covid-statistics/static/js/787.32d0a012.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.937ce2e0.css",
+    "static/js/main.27987e26.js"
+  ]
+}
