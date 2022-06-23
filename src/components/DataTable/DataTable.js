@@ -11,10 +11,17 @@ import {
   TextDescription,
   CountryDescriptionContainer
 } from "../Modal/Modal.styled";
+import {
+    SearchForm,
+    ButtonWrapper,
+    SearchInput,
+  } from "../SearchBar/SearchBar.styled";
 import { ReactComponent as HeartLogo } from "../../images/heart.svg";
 import { ReactComponent as SkelletLogo } from "../../images/skelet.svg";
 import { ReactComponent as DocLogo } from "../../images/document.svg";
 import { GridRowParams } from "@mui/x-data-grid";
+import IconButton from "@mui/material/IconButton";
+import SearchIcon from '@mui/icons-material/Search';
 
 const columns = [
   { field: "id", headerName: "№", width: 78 },
@@ -26,6 +33,8 @@ const DataTable = () => {
   const [data, setData] = useState([]);
   const [showModal, setShowModal] = useState("");
   const [finalClickInfo, setFinalClickInfo] = useState(null);
+  const [filter, setFilter] = useState("");
+
 
   const toggleModal = () => {
     setShowModal(!showModal);
@@ -51,24 +60,25 @@ const DataTable = () => {
     totalDeath: row.TotalDeaths,
     totalRecovered: row.TotalRecovered,
   }));
-  console.log(rows);
+  // console.log(rows);
+  const contactSearch = (e) => {
+    setFilter(e.currentTarget.value);
+  };
+
+  const normalizedFilter = filter.toLowerCase();
+  const filteredContacts = rows.filter((row) =>
+    row.country.toLowerCase().includes(normalizedFilter)
+  );
   return (
     <div style={{ height: 735, width: "100%" }}>
       <DataGrid
         // className={classes.root}
-        rows={rows}
+        rows={filteredContacts}
         columns={columns}
         pageSize={12}
         rowsPerPageOptions={[12]}
         onRowClick={onCountryClick}
       />
-      {finalClickInfo &&
-        `Final clicked id = ${finalClickInfo.id},  
-        Final clicked country = ${finalClickInfo.row.country},
-        Final total confirmed = ${finalClickInfo.row.totalConfirmed},
-        Final total dead = ${finalClickInfo.row.totalDeath},
-        Final total recovered = ${finalClickInfo.row.totalRecovered},
-        `}
       {showModal && (
         <Modal onClose={toggleModal}>
           <CountryName>{finalClickInfo.row.country}</CountryName>
@@ -98,6 +108,20 @@ const DataTable = () => {
           
         </Modal>
       )}
+      <SearchForm >
+          <SearchInput
+            type="text"
+            autoComplete="off"
+            autoFocus
+            placeholder="Search..."
+            value={filter} onChange={contactSearch}
+          />
+          <ButtonWrapper>
+          <IconButton type="button" >
+              <SearchIcon />
+            </IconButton>
+            </ButtonWrapper>
+        </SearchForm>
     </div>
   );
 };

@@ -1,51 +1,42 @@
-import { useState } from "react";
-import {
-  SearchHeader,
-  SearchForm,
-  ButtonWrapper,
-  SearchInput,
-} from "./SearchBar.styled";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import IconButton from "@mui/material/IconButton";
-import SearchIcon from '@mui/icons-material/Search';
+// import { useState } from "react";
+// import {
+//   SearchHeader,
+//   SearchForm,
+//   ButtonWrapper,
+//   SearchInput,
+// } from "./SearchBar.styled";
+// import { ToastContainer, toast } from "react-toastify";
+// import "react-toastify/dist/ReactToastify.css";
+// import IconButton from "@mui/material/IconButton";
+// import SearchIcon from '@mui/icons-material/Search';
 
-export default function SearchBar({onSubmit}) {
-  // const [request, setRequest] = useState("");
+// export default function SearchBar() {
+//   // const [filter, setFilter] = useState("");
+//   // const contactSearch = (e) => {
+//   //   setFilter(e.currentTarget.value);
+//   // };
 
-  // const handleNameChange = (event) => {
-  //   setRequest((event.currentTarget.value.toLowerCase()));
-  // };
+//   // const normalizedFilter = filter.toLowerCase();
+//   // const filteredContacts = rows.filter((row) =>
+//   //   row.name.toLowerCase().includes(normalizedFilter)
+//   // );
 
-  // const handleSubmit = (event) => {
-  //   event.preventDefault();
-
-  //   if (request.trim() === "") {
-  //     toast.error("Please enter your query!", {
-  //       theme: "colored",
-  //     });
-  //     return;
-  //   }
-
-  //   onSubmit(request);
-  //   setRequest("");
-  // };
-    return (
-      // <SearchHeader>
-        <SearchForm >
-            {/* <SearchLabel>Search</SearchLabel> */}
-          <SearchInput
-            type="text"
-            autoComplete="off"
-            autoFocus
-            placeholder="Search..."
-          />
-          <ButtonWrapper>
-          <IconButton type="submit" >
-              <SearchIcon />
-            </IconButton>
-            </ButtonWrapper>
-        </SearchForm>
-      // </SearchHeader>
-    );
-}
+//     return (
+//       // <SearchHeader>
+//         // <SearchForm >
+//         //   <SearchInput
+//         //     type="text"
+//         //     autoComplete="off"
+//         //     autoFocus
+//         //     placeholder="Search..."
+//         //     value={filter} onChange={contactSearch}
+//         //   />
+//         //   <ButtonWrapper>
+//         //   <IconButton type="button" >
+//         //       <SearchIcon />
+//         //     </IconButton>
+//         //     </ButtonWrapper>
+//         // </SearchForm>
+//       // </SearchHeader>
+//     // );
+// }

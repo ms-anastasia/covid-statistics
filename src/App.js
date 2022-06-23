@@ -1,5 +1,5 @@
 import './App.css';
-import SearchBar from "./components/SearchBar/SearchBar";
+// import SearchBar from "./components/SearchBar/SearchBar";
 import Container from "./components/Container/Container";
 import { HeaderContainer, Header } from './components/Header/Header.styled';
 import Title from './components/Header/Header';
@@ -20,7 +20,7 @@ function App() {
     <Container>
       <HeaderContainer>
       <Title/>
-    <SearchBar/>
+    {/* <SearchBar/> */}
     </HeaderContainer>
     <DataTable/>
     <ToastContainer
