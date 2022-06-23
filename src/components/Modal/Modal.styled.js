@@ -31,6 +31,7 @@ color: white;
 font-size: 24px;
 line-height: 28px;
 border: none;
+cursor: pointer;
 
 background-color: #2196F3;
 border-radius: 20px;
@@ -53,7 +54,8 @@ width: 100%;
 export const CountryDescription = styled.li`
 display: flex;
 flex-direction: row;
-// justify-content: space-between;
+justify-content: space-between;
+align-items: center;
 margin-bottom: 49px;
 `;
 
@@ -61,11 +63,12 @@ export const TextWrapper = styled.div`
 width: 100%
 display: flex;
 flex-direction: row;
-justify-content: space-between;
-margin-left: 29px;
+align-items: center;
 `;
 
 export const TextDescription = styled.span`
 display: inline-block;
+margin-left: auto;
+margin-left: 29px;
 `;
 
